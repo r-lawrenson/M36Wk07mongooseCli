@@ -32,12 +32,12 @@ const app = async (yargsObj) => {
     } else {
         console.log("Incorrect command");
     }
-    await mongoose.connection.close();
-    console.log(`Successfully disconected`)
+
   } catch (error) {
     console.log(error);
   }
-
+  await mongoose.connection.close();
+  console.log(`Successfully disconected`)
 };
 
 app(yargs.argv);
