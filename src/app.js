@@ -36,8 +36,8 @@ const app = async (yargsObj) => {
   } catch (error) {
     console.log(error);
   }
-  // await mongoose.connection.close();
-  // console.log(`Successfully disconected`)
+  await mongoose.connection.close();
+  console.log(`Successfully disconected`)
 };
 
 app(yargs.argv);
