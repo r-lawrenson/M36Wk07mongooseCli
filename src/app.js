@@ -13,6 +13,7 @@ const app = async (yargsObj) => {
 
     } else if (yargsObj.list) {
         // list movies from database
+        // node src/app.js --list
         const movieList = await listMovie();
         console.log({ movieList });
 
